@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - KnockKnock</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-white bg-dark border-bottom box-shadow mb-3" >
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="KnockKnock" asp-action="Index">KnockKnock</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="KnockKnock" asp-action="Index">Home</a>
+                        </li>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" width="40" height="40"/>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="https://www.google.com.vn/">Google</a>
+                        </li>
+                        <img src="https://cdn.tgdd.vn/2020/03/GameApp/png-200x200.png" width="40" height="40"/>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="https://www.google.com/intl/vi/gmail/about/">Gmail</a>
+                        </li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="40" height="40"/>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="https://www.youtube.com/">Youtube</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="FunForm" asp-action="Add">Care to click! 100% useful</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="FunForm" asp-action="List">Info for Good deeds</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - KnockKnock_The greatest search engine ever..? - <a asp-area="" asp-controller="KnockKnock" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

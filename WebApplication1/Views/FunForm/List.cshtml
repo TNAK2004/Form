@@ -1,0 +1,50 @@
+@model IEnumerable<WebApplication1.Models.FunForm>
+
+@{
+    ViewData["Title"] = "Forms";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Phone Number</th>
+            <th>Occupation</th>
+            <th>Bank Account</th>
+            <th>Comments</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+        @if (Model.Count()==0){
+            <p>
+                Since there is nothing here, let's give us your 
+                <a asp-area="" asp-controller="FunForm" asp-action="Add">Account!</a>
+                <img style="border-radius: 50%;" src="https://i.gifer.com/origin/05/0588c1fffe5321328cf811b1a4ee5051_w200.gif" width="50" height="50"/>
+            </p>
+        }
+        else{
+            <a asp-area="" asp-controller="FunForm" asp-action="Calendar">Calendar</a>
+            var i = 1;
+            @foreach(var form in Model){
+                <tr>
+                    <td>@i</td>
+                    <td>@form.Name</td>
+                    <td>@form.DoB</td>
+                    <td>@form.PhoneNumber</td>
+                    <td>@form.Occupation</td>
+                    <td>@form.BankAccounts</td>
+                    <td>@form.Comments</td>
+                    <td>
+                        <div>
+                            <a class="btn btn-primary" style="border-radius: 10%;" asp-controller="FunForm" asp-action="Edit" asp-route-id="@form.ID">Edit</a>
+                        </div>
+                    </td> 
+                </tr>
+                i++;
+            }
+        }
+</table>

@@ -1,0 +1,53 @@
+input[b-zw8ayira3c] {
+    width: 50%;
+    border-radius: 10px;
+    font-size: 16px;
+}
+#bt[b-zw8ayira3c] {
+    width: 200px;
+    height: 50px;
+    border-radius: 35px;
+    font-size: 20px;
+    cursor: pointer;
+}
+h1[b-zw8ayira3c] {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border-radius: 15%;
+    background-image: linear-gradient(black, gray);
+    color: transparent;
+    font-family: cursive;
+    font-size: 5vw;
+}
+h1 span[b-zw8ayira3c] {
+    animation: animate-b-zw8ayira3c 3s linear infinite;
+    animation-delay: calc(0.1s*var(--i));
+}
+@keyframes animate-b-zw8ayira3c {
+    0%{
+        color: #fff;
+        filter: blur(2px) hue-rotate(0deg);
+        text-shadow: 0 0 10px rgb(56, 183, 192), 0 0 10px rgb(56, 183, 192), 0 0 20px rgb(56, 183, 192),
+        0 0 40px rgb(56, 183, 192), 0 0 80px rgb(56, 183, 192), 0 0 120px rgb(56, 183, 192),
+        0 0 200px rgb(56, 183, 192), 0 0 400px rgb(56, 183, 192);
+    }
+    30%,70%{
+        color: #fff;
+        filter: blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0 10px rgb(56, 183, 192), 0 0 10px rgb(56, 183, 192), 0 0 20px rgb(56, 183, 192),
+        0 0 40px rgb(56, 183, 192), 0 0 80px rgb(56, 183, 192), 0 0 120px rgb(56, 183, 192),
+        0 0 200px rgb(56, 183, 192), 0 0 400px rgb(56, 183, 192);
+    }
+    100%{
+        color: #fff;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(0deg);
+    }
+}
+
+.image[b-zw8ayira3c] {
+    background-image: url("https://img.freepik.com/free-vector/yellow-background-with-center-glowing-light-effect_1017-26185.jpg");
+    background-size: cover;
+    border-radius: 30%;
+}
